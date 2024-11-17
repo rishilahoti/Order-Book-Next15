@@ -18,7 +18,7 @@ const options: { [key: string]: number[] } = {
 	PI_ETHUSD: [0.05, 0.1, 0.25],
 };
 
-export const ProductsMap: { [key: string]: string } = {
+const ProductsMap: { [key: string]: string } = {
 	PI_XBTUSD: 'PI_ETHUSD',
 	PI_ETHUSD: 'PI_XBTUSD',
 };

@@ -16,7 +16,7 @@ import {
 import { MOBILE_WIDTH, ORDERBOOK_LEVELS } from '../../utils/constants';
 import Loader from '../Loader';
 import DepthVisualizer from '../DepthVisualizer';
-import { ProductsMap } from '../../page';
+
 import { formatNumber } from '../../utils/helper';
 
 const WSS_FEED_URL: string = 'wss://www.cryptofacilities.com/ws/v1';
@@ -25,6 +25,11 @@ export enum OrderType {
 	BIDS,
 	ASKS,
 }
+
+const ProductsMap: { [key: string]: string } = {
+	PI_XBTUSD: 'PI_ETHUSD',
+	PI_ETHUSD: 'PI_XBTUSD',
+};
 
 interface OrderBookProps {
 	windowWidth: number;
