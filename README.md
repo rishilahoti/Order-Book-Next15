@@ -22,5 +22,7 @@ This project uses [`react-use-websocket`](https://github.com/robtaussig/react-us
 
 For state managment [`redux`](https://redux.js.org/usage/nextjs).
 
+I use Prettier Formatter to foramt the code to kame it clean.
+
 
 
