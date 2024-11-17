@@ -8,7 +8,7 @@ import StatusMessage from './components/StatusMessage';
 import { clearOrdersState } from './components/OrderBook/orderbookSlice';
 import { useAppDispatch } from './utils/hooks';
 
-export const ProductIds = {
+const ProductIds = {
 	XBTUSD: 'PI_XBTUSD',
 	ETHUSD: 'PI_ETHUSD',
 };
@@ -35,7 +35,6 @@ function App() {
 		setWindowWidth(() => window.innerWidth);
 	}, []);
 
-
 	const toggleProductId = (): void => {
 		dispatch(clearOrdersState());
 		setProductId(ProductsMap[productId]);
@@ -47,25 +46,23 @@ function App() {
 
 	return (
 		<>
-			
-				<>
-					<Header options={options[productId]} />
-					<OrderBook
-						windowWidth={windowWidth}
-						productId={productId}
-						isFeedKilled={isFeedKilled}
-					/>
-					<Footer
-						toggleFeedCallback={toggleProductId}
-						killFeedCallback={toggleFeed}
-						isFeedKilled={isFeedKilled}
-					/>
-					<StatusMessage
-						isFeedKilled={isFeedKilled}
-						selectedMarket={productId}
-					/>
-				</>
-			
+			<>
+				<Header options={options[productId]} />
+				<OrderBook
+					windowWidth={windowWidth}
+					productId={productId}
+					isFeedKilled={isFeedKilled}
+				/>
+				<Footer
+					toggleFeedCallback={toggleProductId}
+					killFeedCallback={toggleFeed}
+					isFeedKilled={isFeedKilled}
+				/>
+				<StatusMessage
+					isFeedKilled={isFeedKilled}
+					selectedMarket={productId}
+				/>
+			</>
 		</>
 	);
 }
