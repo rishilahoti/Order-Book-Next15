@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './globals.css';
 import Header from './components/Header';
-import OrderBook from './components/OrderBook/page';
+import OrderBook from './components/OrderBook/OrderPage';
 import Footer from './components/Footer';
 import StatusMessage from './components/StatusMessage';
 import { clearOrdersState } from './components/OrderBook/orderbookSlice';

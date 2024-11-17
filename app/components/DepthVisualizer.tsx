@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { OrderType } from './OrderBook/page';
+import { OrderType } from './OrderBook/OrderPage';
 import { MOBILE_WIDTH } from '../utils/constants';
 
 interface DepthVisualizerProps {
